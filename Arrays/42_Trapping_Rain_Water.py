@@ -1,16 +1,16 @@
 class Solution:
     def trap(self, height: List[int]) -> int:
-        l, r = 0, len(height) - 1
-        leftMax, rightMax = height[l], height[r]
-        volume = 0
+        h, volume = height, 0
+        l, r = 0, len(h) - 1
+        leftMax, rightMax = h[l], h[r]
 
         while l < r:
             if leftMax < rightMax:
                 l += 1
-                leftMax = max(leftMax, height[l])
-                volume += leftMax - height[l]
+                leftMax = max(leftMax, h[l])
+                volume += leftMax - h[l]
             else:
                 r -= 1
-                rightMax = max(rightMax, height[r])
-                volume += rightMax - height[r]
+                rightMax = max(rightMax, h[r])
+                volume += rightMax - h[r]
         return volume
