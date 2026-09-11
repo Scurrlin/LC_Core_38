@@ -6,6 +6,7 @@ This repository contains answers to the 38 LeetCode questions that will teach yo
 <summary><strong>Arrays</strong></summary>
 
 <dl>
+
 <dd>
 
 <details>
@@ -73,6 +74,55 @@ class Solution:
 <dd>
 
 <details>
+<summary><small>11. Container With Most Water</small></summary>
+
+```python
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        h, maxArea = height, 0
+        l, r = 0, len(h) - 1
+
+        while l < r:
+            if h[l] < h[r]:
+                area = h[l] * (r - l)
+                l += 1
+            else:
+                area = h[r] * (r - l)
+                r -= 1
+            maxArea = max(maxArea, area)
+        return maxArea
+```
+
+</details>
+
+</dd>
+
+<dd>
+
+<details>
+<summary><small>56. Merge Intervals</small></summary>
+
+```python
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        intervals.sort(key = lambda i: i[0])
+        merged = []
+
+        for i in intervals:
+            if not merged or merged[-1][1] < i[0]:
+                merged.append(i)
+            else:
+                merged[-1][1] = max(merged[-1][1], i[1])
+        return merged
+```
+
+</details>
+
+</dd>
+
+<dd>
+
+<details>
 <summary><small>238. Product of Array Except Self</small></summary>
 
 ```python
@@ -92,56 +142,6 @@ class Solution:
             right *= nums[i]
 
         return res
-```
-
-</details>
-
-</dd>
-
-<dd>
-
-<details>
-<summary><small>128. Longest Consecutive Sequence</small></summary>
-
-```python
-class Solution:
-    def longestConsecutive(self, nums: List[int]) -> int:
-        numSet = set(nums)
-        longest = 0
-
-        for n in numSet:
-            if (n - 1) not in numSet:
-                length = 1
-                while (n + length) in numSet:
-                    length += 1
-                longest = max(length, longest)
-        return longest
-```
-
-</details>
-
-</dd>
-
-<dd>
-
-<details>
-<summary><small>11. Container With Most Water</small></summary>
-
-```python
-class Solution:
-    def maxArea(self, height: List[int]) -> int:
-        h, maxArea = height, 0
-        l, r = 0, len(h) - 1
-
-        while l < r:
-            if h[l] < h[r]:
-                area = h[l] * (r - l)
-                l += 1
-            else:
-                area = h[r] * (r - l)
-                r -= 1
-            maxArea = max(maxArea, area)
-        return maxArea
 ```
 
 </details>
@@ -187,20 +187,21 @@ class Solution:
 <dd>
 
 <details>
-<summary><small>56. Merge Intervals</small></summary>
+<summary><small>128. Longest Consecutive Sequence</small></summary>
 
 ```python
 class Solution:
-    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
-        intervals.sort(key = lambda i: i[0])
-        merged = []
+    def longestConsecutive(self, nums: List[int]) -> int:
+        numSet = set(nums)
+        longest = 0
 
-        for i in intervals:
-            if not merged or merged[-1][1] < i[0]:
-                merged.append(i)
-            else:
-                merged[-1][1] = max(merged[-1][1], i[1])
-        return merged
+        for n in numSet:
+            if (n - 1) not in numSet:
+                length = 1
+                while (n + length) in numSet:
+                    length += 1
+                longest = max(length, longest)
+        return longest
 ```
 
 </details>
@@ -210,27 +211,25 @@ class Solution:
 <dd>
 
 <details>
-<summary><small>39. Combination Sum</small></summary>
+<summary><small>42. Trapping Rain Water</small></summary>
 
 ```python
 class Solution:
-    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        res, c = [], candidates
+    def trap(self, height: List[int]) -> int:
+        l, r = 0, len(height) - 1
+        leftMax, rightMax = height[l], height[r]
+        volume = 0
 
-        def dfs(i, curr, total):
-            if total == target:
-                res.append(curr.copy())
-                return
-            if i >= len(c) or total > target:
-                return
-
-            curr.append(c[i])
-            dfs(i, curr, total + c[i])
-            curr.pop()
-            dfs(i + 1, curr, total)
-            
-        dfs(0, [], 0)
-        return res
+        while l < r:
+            if leftMax < rightMax:
+                l += 1
+                leftMax = max(leftMax, height[l])
+                volume += leftMax - height[l]
+            else:
+                r -= 1
+                rightMax = max(rightMax, height[r])
+                volume += rightMax - height[r]
+        return volume
 ```
 
 </details>
@@ -245,6 +244,7 @@ class Solution:
 <summary><strong>Strings</strong></summary>
 
 <dl>
+
 <dd>
 
 <details>
@@ -336,6 +336,7 @@ class Solution:
 <summary><strong>Linked Lists</strong></summary>
 
 <dl>
+
 <dd>
 
 <details>
@@ -418,6 +419,7 @@ class Solution:
 <summary><strong>Stacks</strong></summary>
 
 <dl>
+
 <dd>
 
 <details>
@@ -474,34 +476,6 @@ class MinStack:
 
 </dd>
 
-<dd>
-
-<details>
-<summary><small>42. Trapping Rain Water</small></summary>
-
-```python
-class Solution:
-    def trap(self, height: List[int]) -> int:
-        stack = []
-        volume = 0
-
-        for i, h in enumerate(height):
-            while stack and h > height[stack[-1]]:
-                mid = stack.pop()
-                if not stack:
-                    break
-                left = stack[-1]
-                width = i - left - 1
-                bounded = min(height[left], h) - height[mid]
-                volume += width * bounded
-            stack.append(i)
-        return volume
-```
-
-</details>
-
-</dd>
-
 </dl>
 
 </details>
@@ -510,6 +484,32 @@ class Solution:
 <summary><strong>Binary Search</strong></summary>
 
 <dl>
+
+<dd>
+
+<details>
+<summary><small>704. Binary Search</small></summary>
+
+```python
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        l, r = 0, len(nums) - 1
+
+        while l <= r:
+            m = (l + r) // 2
+            if nums[m] == target:
+                return m
+            elif nums[m] < target:
+                l = m + 1
+            else:
+                r = m - 1
+        return -1
+```
+
+</details>
+
+</dd>
+
 <dd>
 
 <details>
@@ -609,6 +609,33 @@ class TimeMap:
 <summary><strong>Binary Trees</strong></summary>
 
 <dl>
+
+<dd>
+
+<details>
+<summary><small>543. Diameter of Binary Tree</small></summary>
+
+```python
+class Solution:
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        res = 0
+
+        def dfs(root):
+            nonlocal res
+            if not root:
+                return 0
+            left = dfs(root.left)
+            right = dfs(root.right)
+            res = max(res, left + right)
+            return 1 + max(left, right)
+        dfs(root)
+        return res
+```
+
+</details>
+
+</dd>
+
 <dd>
 
 <details>
@@ -634,32 +661,6 @@ class Solution:
                 if node.right:
                     q.append(node.right)
             res.append(level)
-        return res
-```
-
-</details>
-
-</dd>
-
-<dd>
-
-<details>
-<summary><small>543. Diameter of Binary Tree</small></summary>
-
-```python
-class Solution:
-    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
-        res = 0
-
-        def dfs(root):
-            nonlocal res
-            if not root:
-                return 0
-            left = dfs(root.left)
-            right = dfs(root.right)
-            res = max(res, left + right)
-            return 1 + max(left, right)
-        dfs(root)
         return res
 ```
 
@@ -740,6 +741,7 @@ class Codec:
 <summary><strong>Graphs</strong></summary>
 
 <dl>
+
 <dd>
 
 <details>
@@ -808,44 +810,6 @@ class Solution:
 <dd>
 
 <details>
-<summary><small>207. Course Schedule</small></summary>
-
-```python
-class Solution:
-    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        preMap = {i: [] for i in range(numCourses)}
-
-        for course, p in prerequisites:
-            preMap[course].append(p)
-        
-        visiting = set()
-
-        def dfs(course):
-            if course in visiting:
-                return False
-            if preMap[course] == []:
-                return True
-            visiting.add(course)
-            for p in preMap[course]:
-                if not dfs(p):
-                    return False
-            visiting.remove(course)
-            preMap[course] = []
-            return True
-        
-        for c in range(numCourses):
-            if not dfs(c):
-                return False
-        return True
-```
-
-</details>
-
-</dd>
-
-<dd>
-
-<details>
 <summary><small>994. Rotting Oranges</small></summary>
 
 ```python
@@ -894,28 +858,35 @@ class Solution:
 <dd>
 
 <details>
-<summary><small>542. 01 Matrix</small></summary>
+<summary><small>207. Course Schedule</small></summary>
 
 ```python
 class Solution:
-    def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
-        m, n = len(mat), len(mat[0])
-        dir = (-1, 1), (1, 1)
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        preMap = {i: [] for i in range(numCourses)}
 
-        for r in range(m):
-            for c in range(n):
-                if mat[r][c] > 0:
-                    top = mat[r - 1][c] if r > 0 else math.inf
-                    left = mat[r][c - 1] if c > 0 else math.inf
-                    mat[r][c] = min(top, left) + 1
+        for course, p in prerequisites:
+            preMap[course].append(p)
+        
+        visiting = set()
 
-        for r in range(m - 1, -1, -1):
-            for c in range(n - 1, -1, -1):
-                if mat[r][c] > 0:
-                    bot = mat[r + 1][c] if r < m - 1 else math.inf
-                    right = mat[r][c + 1] if c < n - 1 else math.inf
-                    mat[r][c] = min(mat[r][c], bot + 1, right + 1)
-        return mat
+        def dfs(course):
+            if course in visiting:
+                return False
+            if preMap[course] == []:
+                return True
+            visiting.add(course)
+            for p in preMap[course]:
+                if not dfs(p):
+                    return False
+            visiting.remove(course)
+            preMap[course] = []
+            return True
+        
+        for c in range(numCourses):
+            if not dfs(c):
+                return False
+        return True
 ```
 
 </details>
@@ -930,6 +901,7 @@ class Solution:
 <summary><strong>Dynamic Programming</strong></summary>
 
 <dl>
+
 <dd>
 
 <details>
@@ -977,6 +949,25 @@ class Solution:
 <dd>
 
 <details>
+<summary><small>62. Unique Paths</small></summary>
+
+```python
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        dp = [1] * n
+        for _ in range(1, m):
+            for col in range(1, n):
+                dp[col] += dp[col - 1]
+        return dp[-1]
+```
+
+</details>
+
+</dd>
+
+<dd>
+
+<details>
 <summary><small>322. Coin Change</small></summary>
 
 ```python
@@ -997,25 +988,6 @@ class Solution:
 
 </dd>
 
-<dd>
-
-<details>
-<summary><small>62. Unique Paths</small></summary>
-
-```python
-class Solution:
-    def uniquePaths(self, m: int, n: int) -> int:
-        dp = [1] * n
-        for _ in range(1, m):
-            for col in range(1, n):
-                dp[col] += dp[col - 1]
-        return dp[-1]
-```
-
-</details>
-
-</dd>
-
 </dl>
 
 </details>
@@ -1024,6 +996,7 @@ class Solution:
 <summary><strong>Heap</strong></summary>
 
 <dl>
+
 <dd>
 
 <details>
@@ -1088,9 +1061,10 @@ class MedianFinder:
 </details>
 
 <details>
-<summary><strong>Recursion</strong></summary>
+<summary><strong>Backtracking</strong></summary>
 
 <dl>
+
 <dd>
 
 <details>
@@ -1109,6 +1083,36 @@ class Solution:
                 path.pop()
 
         dfs(0)
+        return res
+```
+
+</details>
+
+</dd>
+
+<dd>
+
+<details>
+<summary><small>39. Combination Sum</small></summary>
+
+```python
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        res, c = [], candidates
+
+        def dfs(i, curr, total):
+            if total == target:
+                res.append(curr.copy())
+                return
+            if i >= len(c) or total > target:
+                return
+
+            curr.append(c[i])
+            dfs(i, curr, total + c[i])
+            curr.pop()
+            dfs(i + 1, curr, total)
+            
+        dfs(0, [], 0)
         return res
 ```
 
