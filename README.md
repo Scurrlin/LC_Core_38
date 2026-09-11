@@ -162,8 +162,10 @@ class Solution:
         for i in range(len(nums)):
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
+
             j = i + 1
             k = len(nums) - 1
+            
             while j < k:
                 total = nums[i] + nums[j] + nums[k]
                 if total < 0:
@@ -190,14 +192,14 @@ class Solution:
 ```python
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
-        intervals.sort(key = lambda interval: interval[0])
+        intervals.sort(key = lambda i: i[0])
         merged = []
 
-        for interval in intervals:
-            if not merged or merged[-1][1] < interval[0]:
-                merged.append(interval)
+        for i in intervals:
+            if not merged or merged[-1][1] < i[0]:
+                merged.append(i)
             else:
-                merged[-1][1] = max(merged[-1][1], interval[1])
+                merged[-1][1] = max(merged[-1][1], i[1])
         return merged
 ```
 
@@ -213,17 +215,17 @@ class Solution:
 ```python
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        res = []
+        res, c = [], candidates
 
         def dfs(i, curr, total):
             if total == target:
                 res.append(curr.copy())
                 return
-            if i >= len(candidates) or total > target:
+            if i >= len(c) or total > target:
                 return
 
-            curr.append(candidates[i])
-            dfs(i, curr, total + candidates[i])
+            curr.append(c[i])
+            dfs(i, curr, total + c[i])
             curr.pop()
             dfs(i + 1, curr, total)
             
