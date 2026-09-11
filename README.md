@@ -738,6 +738,161 @@ class Codec:
 </details>
 
 <details>
+<summary><strong>Heap</strong></summary>
+
+<dl>
+
+<dd>
+
+<details>
+<summary><small>973. K Closest Points to Origin</small></summary>
+
+```python
+import heapq
+
+class Solution:
+    def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
+        heap = []
+        for (x, y) in points:
+            dist = -(x * x + y * y)
+            if len(heap) == K:
+                heapq.heappushpop(heap, (dist, x, y))
+            else:
+                heapq.heappush(heap, (dist, x, y))
+        return [(x, y) for (dist, x, y) in heap]
+```
+
+</details>
+
+</dd>
+
+<dd>
+
+<details>
+<summary><small>295. Find Median from Data Stream</small></summary>
+
+```python
+class MedianFinder:
+    def __init__(self):
+        self.small, self.large = [], []
+
+    def addNum(self, num: int) -> None:
+        if self.large and num > self.large[0]:
+            heapq.heappush(self.large, num)
+        else:
+            heapq.heappush(self.small, -1 * num)
+
+        if len(self.small) > len(self.large) + 1:
+            val = -1 * heapq.heappop(self.small)
+            heapq.heappush(self.large, val)
+        if len(self.large) > len(self.small) + 1:
+            val = heapq.heappop(self.large)
+            heapq.heappush(self.small, -1 * val)
+
+    def findMedian(self) -> float:
+        if len(self.small) > len(self.large):
+            return -1 * self.small[0]
+        elif len(self.large) > len(self.small):
+            return self.large[0]
+        return (-1 * self.small[0] + self.large[0]) / 2.0
+```
+
+</details>
+
+</dd>
+
+</dl>
+
+</details>
+
+<details>
+<summary><strong>Backtracking</strong></summary>
+
+<dl>
+
+<dd>
+
+<details>
+<summary><small>78. Subsets</small></summary>
+
+```python
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        res, path = [], []
+
+        def dfs(i):
+            res.append(path.copy())
+            for j in range(i, len(nums)):
+                path.append(nums[j])
+                dfs(j + 1)
+                path.pop()
+
+        dfs(0)
+        return res
+```
+
+</details>
+
+</dd>
+
+<dd>
+
+<details>
+<summary><small>39. Combination Sum</small></summary>
+
+```python
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        res, c = [], candidates
+
+        def dfs(i, curr, total):
+            if total == target:
+                res.append(curr.copy())
+                return
+            if i >= len(c) or total > target:
+                return
+
+            curr.append(c[i])
+            dfs(i, curr, total + c[i])
+            curr.pop()
+            dfs(i + 1, curr, total)
+            
+        dfs(0, [], 0)
+        return res
+```
+
+</details>
+
+</dd>
+
+<dd>
+
+<details>
+<summary><small>46. Permutations</small></summary>
+
+```python
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        def backtrack(nums, path): 
+            if not nums: return res.append(path)
+            for i in range(len(nums)): 
+                backtrack(
+                    nums[:i] + nums[i + 1:],
+                    path + [nums[i]]) 
+        res = [] 
+        backtrack(nums, []) 
+        return res
+```
+
+</details>
+
+</dd>
+
+</dl>
+
+</details>
+
+<details>
 <summary><strong>Graphs</strong></summary>
 
 <dl>
@@ -982,161 +1137,6 @@ class Solution:
                 dp[i] = min(dp[i], dp[i - c] + 1)
 
         return dp[a] if dp[a] != a + 1 else -1
-```
-
-</details>
-
-</dd>
-
-</dl>
-
-</details>
-
-<details>
-<summary><strong>Heap</strong></summary>
-
-<dl>
-
-<dd>
-
-<details>
-<summary><small>973. K Closest Points to Origin</small></summary>
-
-```python
-import heapq
-
-class Solution:
-    def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
-        heap = []
-        for (x, y) in points:
-            dist = -(x * x + y * y)
-            if len(heap) == K:
-                heapq.heappushpop(heap, (dist, x, y))
-            else:
-                heapq.heappush(heap, (dist, x, y))
-        return [(x, y) for (dist, x, y) in heap]
-```
-
-</details>
-
-</dd>
-
-<dd>
-
-<details>
-<summary><small>295. Find Median from Data Stream</small></summary>
-
-```python
-class MedianFinder:
-    def __init__(self):
-        self.small, self.large = [], []
-
-    def addNum(self, num: int) -> None:
-        if self.large and num > self.large[0]:
-            heapq.heappush(self.large, num)
-        else:
-            heapq.heappush(self.small, -1 * num)
-
-        if len(self.small) > len(self.large) + 1:
-            val = -1 * heapq.heappop(self.small)
-            heapq.heappush(self.large, val)
-        if len(self.large) > len(self.small) + 1:
-            val = heapq.heappop(self.large)
-            heapq.heappush(self.small, -1 * val)
-
-    def findMedian(self) -> float:
-        if len(self.small) > len(self.large):
-            return -1 * self.small[0]
-        elif len(self.large) > len(self.small):
-            return self.large[0]
-        return (-1 * self.small[0] + self.large[0]) / 2.0
-```
-
-</details>
-
-</dd>
-
-</dl>
-
-</details>
-
-<details>
-<summary><strong>Backtracking</strong></summary>
-
-<dl>
-
-<dd>
-
-<details>
-<summary><small>78. Subsets</small></summary>
-
-```python
-class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
-        res, path = [], []
-
-        def dfs(i):
-            res.append(path.copy())
-            for j in range(i, len(nums)):
-                path.append(nums[j])
-                dfs(j + 1)
-                path.pop()
-
-        dfs(0)
-        return res
-```
-
-</details>
-
-</dd>
-
-<dd>
-
-<details>
-<summary><small>39. Combination Sum</small></summary>
-
-```python
-class Solution:
-    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        res, c = [], candidates
-
-        def dfs(i, curr, total):
-            if total == target:
-                res.append(curr.copy())
-                return
-            if i >= len(c) or total > target:
-                return
-
-            curr.append(c[i])
-            dfs(i, curr, total + c[i])
-            curr.pop()
-            dfs(i + 1, curr, total)
-            
-        dfs(0, [], 0)
-        return res
-```
-
-</details>
-
-</dd>
-
-<dd>
-
-<details>
-<summary><small>46. Permutations</small></summary>
-
-```python
-class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:
-        def backtrack(nums, path): 
-            if not nums: return res.append(path)
-            for i in range(len(nums)): 
-                backtrack(
-                    nums[:i] + nums[i + 1:],
-                    path + [nums[i]]) 
-        res = [] 
-        backtrack(nums, []) 
-        return res
 ```
 
 </details>
