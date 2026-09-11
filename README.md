@@ -34,11 +34,14 @@ class Solution:
 ```python
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        minPrice, profit = prices[0], 0
+        minPrice = float('inf')
+        best = 0
         for p in prices:
-            minPrice = min(minPrice, p)
-            profit = max(profit, p - minPrice)
-        return profit
+            if p < minPrice:
+                minPrice = p
+            else:
+                best = max(best, p - minPrice)
+        return best
 ```
 
 </details>
