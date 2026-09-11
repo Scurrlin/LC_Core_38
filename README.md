@@ -5,8 +5,10 @@ This repository contains answers to the 38 LeetCode questions that will teach yo
 <details>
 <summary><strong>Arrays</strong></summary>
 
+<blockquote>
+
 <details>
-<summary>1. Two Sum</summary>
+<summary><small>1. Two Sum</small></summary>
 
 ```python
 class Solution:
@@ -21,8 +23,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>121. Best Time to Buy and Sell Stock</summary>
+<summary><small>121. Best Time to Buy and Sell Stock</small></summary>
 
 ```python
 class Solution:
@@ -36,8 +42,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>49. Group Anagrams</summary>
+<summary><small>49. Group Anagrams</small></summary>
 
 ```python
 from collections import defaultdict
@@ -53,8 +63,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>238. Product of Array Except Self</summary>
+<summary><small>238. Product of Array Except Self</small></summary>
 
 ```python
 class Solution:
@@ -76,8 +90,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>128. Longest Consecutive Sequence</summary>
+<summary><small>128. Longest Consecutive Sequence</small></summary>
 
 ```python
 class Solution:
@@ -96,8 +114,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>11. Container With Most Water</summary>
+<summary><small>11. Container With Most Water</small></summary>
 
 ```python
 class Solution:
@@ -118,8 +140,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>15. 3Sum</summary>
+<summary><small>15. 3Sum</small></summary>
 
 ```python
 class Solution:
@@ -148,8 +174,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>56. Merge Intervals</summary>
+<summary><small>56. Merge Intervals</small></summary>
 
 ```python
 class Solution:
@@ -167,8 +197,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>39. Combination Sum</summary>
+<summary><small>39. Combination Sum</small></summary>
 
 ```python
 class Solution:
@@ -193,13 +227,17 @@ class Solution:
 
 </details>
 
+</blockquote>
+
 </details>
 
 <details>
 <summary><strong>Strings</strong></summary>
 
+<blockquote>
+
 <details>
-<summary>3. Longest Substring Without Repeating Characters</summary>
+<summary><small>3. Longest Substring Without Repeating Characters</small></summary>
 
 ```python
 class Solution:
@@ -218,8 +256,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>424. Longest Repeating Character Replacement</summary>
+<summary><small>424. Longest Repeating Character Replacement</small></summary>
 
 ```python
 class Solution:
@@ -238,8 +280,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>76. Minimum Window Substring</summary>
+<summary><small>76. Minimum Window Substring</small></summary>
 
 ```python
 from collections import Counter
@@ -269,13 +315,17 @@ class Solution:
 
 </details>
 
+</blockquote>
+
 </details>
 
 <details>
 <summary><strong>Linked Lists</strong></summary>
 
+<blockquote>
+
 <details>
-<summary>206. Reverse Linked List</summary>
+<summary><small>206. Reverse Linked List</small></summary>
 
 ```python
 class Solution:
@@ -293,8 +343,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>21. Merge Two Sorted Lists</summary>
+<summary><small>21. Merge Two Sorted Lists</small></summary>
 
 ```python
 class Solution:
@@ -318,8 +372,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>141. Linked List Cycle</summary>
+<summary><small>141. Linked List Cycle</small></summary>
 
 ```python
 class Solution:
@@ -336,13 +394,17 @@ class Solution:
 
 </details>
 
+</blockquote>
+
 </details>
 
 <details>
 <summary><strong>Stacks</strong></summary>
 
+<blockquote>
+
 <details>
-<summary>20. Valid Parentheses</summary>
+<summary><small>20. Valid Parentheses</small></summary>
 
 ```python
 class Solution:
@@ -362,8 +424,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>155. Min Stack</summary>
+<summary><small>155. Min Stack</small></summary>
 
 ```python
 class MinStack:
@@ -389,8 +455,12 @@ class MinStack:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>42. Trapping Rain Water</summary>
+<summary><small>42. Trapping Rain Water</small></summary>
 
 ```python
 class Solution:
@@ -413,13 +483,17 @@ class Solution:
 
 </details>
 
+</blockquote>
+
 </details>
 
 <details>
 <summary><strong>Binary Search</strong></summary>
 
+<blockquote>
+
 <details>
-<summary>33. Search in Rotated Sorted Array</summary>
+<summary><small>33. Search in Rotated Sorted Array</small></summary>
 
 ```python
 class Solution:
@@ -445,8 +519,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>875. Koko Eating Bananas</summary>
+<summary><small>875. Koko Eating Bananas</small></summary>
 
 ```python
 class Solution:
@@ -469,8 +547,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>981. Time Based Key-Value Store</summary>
+<summary><small>981. Time Based Key-Value Store</small></summary>
 
 ```python
 class TimeMap:
@@ -497,13 +579,17 @@ class TimeMap:
 
 </details>
 
+</blockquote>
+
 </details>
 
 <details>
 <summary><strong>Binary Trees</strong></summary>
 
+<blockquote>
+
 <details>
-<summary>102. Binary Tree Level Order Traversal</summary>
+<summary><small>102. Binary Tree Level Order Traversal</small></summary>
 
 ```python
 from collections import deque
@@ -530,8 +616,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>543. Diameter of Binary Tree</summary>
+<summary><small>543. Diameter of Binary Tree</small></summary>
 
 ```python
 class Solution:
@@ -552,8 +642,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>236. Lowest Common Ancestor of a Binary Tree</summary>
+<summary><small>236. Lowest Common Ancestor of a Binary Tree</small></summary>
 
 ```python
 class Solution:
@@ -574,8 +668,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>297. Serialize and Deserialize Binary Tree</summary>
+<summary><small>297. Serialize and Deserialize Binary Tree</small></summary>
 
 ```python
 class Codec:
@@ -609,13 +707,17 @@ class Codec:
 
 </details>
 
+</blockquote>
+
 </details>
 
 <details>
 <summary><strong>Graphs</strong></summary>
 
+<blockquote>
+
 <details>
-<summary>200. Number of Islands</summary>
+<summary><small>200. Number of Islands</small></summary>
 
 ```python
 class Solution:
@@ -648,8 +750,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>133. Clone Graph</summary>
+<summary><small>133. Clone Graph</small></summary>
 
 ```python
 class Solution:
@@ -671,8 +777,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>207. Course Schedule</summary>
+<summary><small>207. Course Schedule</small></summary>
 
 ```python
 class Solution:
@@ -705,8 +815,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>994. Rotting Oranges</summary>
+<summary><small>994. Rotting Oranges</small></summary>
 
 ```python
 from collections import deque
@@ -749,8 +863,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>542. 01 Matrix</summary>
+<summary><small>542. 01 Matrix</small></summary>
 
 ```python
 class Solution:
@@ -776,13 +894,17 @@ class Solution:
 
 </details>
 
+</blockquote>
+
 </details>
 
 <details>
 <summary><strong>Dynamic Programming</strong></summary>
 
+<blockquote>
+
 <details>
-<summary>53. Maximum Subarray</summary>
+<summary><small>53. Maximum Subarray</small></summary>
 
 ```python
 class Solution:
@@ -799,8 +921,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>198. House Robber</summary>
+<summary><small>198. House Robber</small></summary>
 
 ```python
 class Solution:
@@ -816,8 +942,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>322. Coin Change</summary>
+<summary><small>322. Coin Change</small></summary>
 
 ```python
 class Solution:
@@ -840,8 +970,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>62. Unique Paths</summary>
+<summary><small>62. Unique Paths</small></summary>
 
 ```python
 class Solution:
@@ -855,13 +989,17 @@ class Solution:
 
 </details>
 
+</blockquote>
+
 </details>
 
 <details>
 <summary><strong>Heap</strong></summary>
 
+<blockquote>
+
 <details>
-<summary>973. K Closest Points to Origin</summary>
+<summary><small>973. K Closest Points to Origin</small></summary>
 
 ```python
 import heapq
@@ -880,8 +1018,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>295. Find Median from Data Stream</summary>
+<summary><small>295. Find Median from Data Stream</small></summary>
 
 ```python
 class MedianFinder:
@@ -911,13 +1053,17 @@ class MedianFinder:
 
 </details>
 
+</blockquote>
+
 </details>
 
 <details>
 <summary><strong>Recursion</strong></summary>
 
+<blockquote>
+
 <details>
-<summary>78. Subsets</summary>
+<summary><small>78. Subsets</small></summary>
 
 ```python
 class Solution:
@@ -937,8 +1083,12 @@ class Solution:
 
 </details>
 
+</blockquote>
+
+<blockquote>
+
 <details>
-<summary>46. Permutations</summary>
+<summary><small>46. Permutations</small></summary>
 
 ```python
 class Solution:
@@ -955,5 +1105,7 @@ class Solution:
 ```
 
 </details>
+
+</blockquote>
 
 </details>
