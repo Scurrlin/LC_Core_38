@@ -5,7 +5,8 @@ This repository contains answers to the 38 LeetCode questions that will teach yo
 <details>
 <summary><strong>Arrays</strong></summary>
 
-<blockquote>
+<dl>
+<dd>
 
 <details>
 <summary><small>1. Two Sum</small></summary>
@@ -23,9 +24,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>121. Best Time to Buy and Sell Stock</small></summary>
@@ -42,9 +43,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>49. Group Anagrams</small></summary>
@@ -63,9 +64,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>238. Product of Array Except Self</small></summary>
@@ -90,9 +91,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>128. Longest Consecutive Sequence</small></summary>
@@ -114,9 +115,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>11. Container With Most Water</small></summary>
@@ -140,9 +141,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>15. 3Sum</small></summary>
@@ -174,9 +175,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>56. Merge Intervals</small></summary>
@@ -197,9 +198,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>39. Combination Sum</small></summary>
@@ -227,14 +228,17 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
+
+</dl>
 
 </details>
 
 <details>
 <summary><strong>Strings</strong></summary>
 
-<blockquote>
+<dl>
+<dd>
 
 <details>
 <summary><small>3. Longest Substring Without Repeating Characters</small></summary>
@@ -256,9 +260,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>424. Longest Repeating Character Replacement</small></summary>
@@ -280,9 +284,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>76. Minimum Window Substring</small></summary>
@@ -315,14 +319,17 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
+
+</dl>
 
 </details>
 
 <details>
 <summary><strong>Linked Lists</strong></summary>
 
-<blockquote>
+<dl>
+<dd>
 
 <details>
 <summary><small>206. Reverse Linked List</small></summary>
@@ -343,9 +350,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>21. Merge Two Sorted Lists</small></summary>
@@ -372,9 +379,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>141. Linked List Cycle</small></summary>
@@ -394,14 +401,17 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
+
+</dl>
 
 </details>
 
 <details>
 <summary><strong>Stacks</strong></summary>
 
-<blockquote>
+<dl>
+<dd>
 
 <details>
 <summary><small>20. Valid Parentheses</small></summary>
@@ -424,9 +434,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>155. Min Stack</small></summary>
@@ -455,9 +465,9 @@ class MinStack:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>42. Trapping Rain Water</small></summary>
@@ -483,14 +493,17 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
+
+</dl>
 
 </details>
 
 <details>
 <summary><strong>Binary Search</strong></summary>
 
-<blockquote>
+<dl>
+<dd>
 
 <details>
 <summary><small>33. Search in Rotated Sorted Array</small></summary>
@@ -519,9 +532,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>875. Koko Eating Bananas</small></summary>
@@ -547,9 +560,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>981. Time Based Key-Value Store</small></summary>
@@ -579,14 +592,17 @@ class TimeMap:
 
 </details>
 
-</blockquote>
+</dd>
+
+</dl>
 
 </details>
 
 <details>
 <summary><strong>Binary Trees</strong></summary>
 
-<blockquote>
+<dl>
+<dd>
 
 <details>
 <summary><small>102. Binary Tree Level Order Traversal</small></summary>
@@ -616,9 +632,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>543. Diameter of Binary Tree</small></summary>
@@ -642,9 +658,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>236. Lowest Common Ancestor of a Binary Tree</small></summary>
@@ -668,9 +684,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>297. Serialize and Deserialize Binary Tree</small></summary>
@@ -707,14 +723,17 @@ class Codec:
 
 </details>
 
-</blockquote>
+</dd>
+
+</dl>
 
 </details>
 
 <details>
 <summary><strong>Graphs</strong></summary>
 
-<blockquote>
+<dl>
+<dd>
 
 <details>
 <summary><small>200. Number of Islands</small></summary>
@@ -750,9 +769,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>133. Clone Graph</small></summary>
@@ -777,9 +796,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>207. Course Schedule</small></summary>
@@ -815,9 +834,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>994. Rotting Oranges</small></summary>
@@ -863,9 +882,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>542. 01 Matrix</small></summary>
@@ -894,14 +913,17 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
+
+</dl>
 
 </details>
 
 <details>
 <summary><strong>Dynamic Programming</strong></summary>
 
-<blockquote>
+<dl>
+<dd>
 
 <details>
 <summary><small>53. Maximum Subarray</small></summary>
@@ -921,9 +943,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>198. House Robber</small></summary>
@@ -942,9 +964,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>322. Coin Change</small></summary>
@@ -970,9 +992,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>62. Unique Paths</small></summary>
@@ -989,14 +1011,17 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
+
+</dl>
 
 </details>
 
 <details>
 <summary><strong>Heap</strong></summary>
 
-<blockquote>
+<dl>
+<dd>
 
 <details>
 <summary><small>973. K Closest Points to Origin</small></summary>
@@ -1018,9 +1043,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>295. Find Median from Data Stream</small></summary>
@@ -1053,14 +1078,17 @@ class MedianFinder:
 
 </details>
 
-</blockquote>
+</dd>
+
+</dl>
 
 </details>
 
 <details>
 <summary><strong>Recursion</strong></summary>
 
-<blockquote>
+<dl>
+<dd>
 
 <details>
 <summary><small>78. Subsets</small></summary>
@@ -1083,9 +1111,9 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
 
-<blockquote>
+<dd>
 
 <details>
 <summary><small>46. Permutations</small></summary>
@@ -1106,6 +1134,8 @@ class Solution:
 
 </details>
 
-</blockquote>
+</dd>
+
+</dl>
 
 </details>
