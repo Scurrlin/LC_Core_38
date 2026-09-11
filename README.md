@@ -59,11 +59,11 @@ from collections import defaultdict
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        groups = defaultdict(list)
-        for s in strs:
-            key = tuple(sorted(s))
-            groups[key].append(s)
-        return list(groups.values())
+        group = defaultdict(list)
+        for word in strs:
+            sortedWord = tuple(sorted(word))
+            group[sortedWord].append(word)
+        return list(group.values())
 ```
 
 </details>
